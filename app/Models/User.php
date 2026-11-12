@@ -19,8 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'phone',
+        'login',
         'email',
         'password',
+        'is_admin',
     ];
 
     /**
@@ -41,5 +44,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'is admin' => 'boolean',
     ];
+        // Связь: у одного пользователя может быть много заявок
+    public function repairRequests()
+    {
+        return $this->hasMany(RepairRequest::class);
+    }
 }

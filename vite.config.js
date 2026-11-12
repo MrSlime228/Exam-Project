@@ -7,6 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/css/style.css', // Путь к нашим стилям
+                'resources/js/slider.js'  // Путь к нашему скрипту
             ],
             refresh: true,
         }),

@@ -11,11 +11,18 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- Styles -->
+        <!--  <link rel="stylesheet" href="{{ asset('css/style.css') }}"> -->
+        @vite(['resources/css/app.css', 'resources/css/style.css'])
+        
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/js/app.js', 'resources/js/slider.js'])
+        <!-- <script src="{{ asset('js/slider.js') }}" defer></script> -->
+        
+
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-100 w-full">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -28,7 +35,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="w-full">
                 {{ $slot }}
             </main>
         </div>
