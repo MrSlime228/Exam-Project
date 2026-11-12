@@ -13,11 +13,12 @@
             <label>Адрес объекта ремонта
                 <input type="text" name="address" value="{{ old('address') }}" required>
             </label>
-            <label>Тип ремонта
+            <label>Тип мебели 
                 <select name="repair_type" required>
-                    <option value="cosmetic">Косметический ремонт</option>
-                    <option value="capital">Капитальный ремонт</option>
-                    <option value="electrical">Электромонтаж</option>
+                    <option value="tabouret">Табурет</option>
+                    <option value="chair">Стул</option>
+                    <option value="armchair">Кресло</option>
+                    <option value="sofa">Диван</option>
                 </select>
             </label>
             <label>Способ оплаты
