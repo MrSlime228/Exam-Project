@@ -10,9 +10,7 @@
 
         <form method="POST" action="{{ route('requests.store') }}">
             @csrf
-            <label>Адрес объекта ремонта
-                <input type="text" name="address" value="{{ old('address') }}" required>
-            </label>
+            
             <label>Тип мебели 
                 <select name="repair_type" required>
                     <option value="tabouret">Табурет</option>
@@ -20,6 +18,9 @@
                     <option value="armchair">Кресло</option>
                     <option value="sofa">Диван</option>
                 </select>
+            </label>
+            <label>Количество мебели
+                <input type="text" name="how_much" value="{{ old('how_much') }}" required>
             </label>
             <label>Способ оплаты
                 <select name="payment_method" required>

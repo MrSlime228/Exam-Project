@@ -21,8 +21,8 @@ class RepairRequestController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'address'        => ['required', 'string', 'max:255'],
-            'repair_type'    => ['required', 'in:cosmetic,capital,electrical'],
+            'repair_type'    => ['required', 'in:tabouret,chair,armchair,sofa'],
+            'how_much'       => ['required', 'string', 'max:10'],
             'payment_method' => ['required', 'in:cash,card,bank_transfer'],
             'repair_datetime'=> ['required', 'date', 'after:now'],
         ]);

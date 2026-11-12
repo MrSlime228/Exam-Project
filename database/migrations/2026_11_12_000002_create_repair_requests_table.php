@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('repair_requests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('address');
-            $table->enum('repair_type', ['cosmetic', 'capital', 'electrical']);
+            $table->enum('repair_type', ['tabouret', 'chair', 'armchair','sofa']);
+            $table->string('how_much');
             $table->enum('payment_method', ['cash', 'card', 'bank_transfer']);
             $table->dateTime('repair_datetime');
             $table->enum('status', ['new', 'in_progress', 'completed', 'cancelled'])->default('new');
