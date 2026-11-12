@@ -107,14 +107,13 @@ tr:hover {
 .status-completed { color: #16a34a; font-weight: bold; }
 .status-cancelled { color: #dc2626; font-weight: bold; }
 
-/* --- АДАПТИВНОСТЬ (все @media всегда в конце) --- */
 
 /* Планшеты и небольшие ноутбуки */
 @media (max-width: 1024px) {
     .slider-track img { height: 320px; }
 }
 
-/* Мобильные телефоны (включая твои 390x844) */
+/* Мобильные телефоны (включая 390x844) */
 @media (max-width: 768px) {
     .slider-track img { height: 220px; }
     
